@@ -15,13 +15,6 @@ while True:
         print("gagal login!coba lagi")
 
 
-# golongan_darah = [
-# "A+": 0, "A-":0,
-# "B+": 0,, "B-": 0,
-# "AB+": 0, "AB-": 0,
-# "O": 0, "O-": 0
-
-# ]
 
 while True:
     golongan =input("Masukkan golongan darah (A, B, AB, O): ") 
@@ -29,8 +22,10 @@ while True:
         rhesus = input("Masukkan rhesus (+ / -): ")
         if rhesus == "+":
             golongan_rh ="golongan darah = A+"
+            print(golongan_rh)
         elif rhesus == "-":
             golongan_rh ="golongan darah = A-"
+            print(golongan_rh)
         else:
             print("rhesus tidak valid!")
             continue
@@ -72,9 +67,20 @@ while True:
             continue
 
             
-    jumlah_kantong_darah = input("Masukkan banyak kantong darah")
+    jumlah_kantong_darah = int(input("Masukkan banyak kantong darah:"))
     ml = jumlah_kantong_darah * 500
     print(f"total darah = {ml} ml")
+
     
+    ulang = input('Apakah anda ingin menginput lagi? (Y/T): ')
+    if ulang == 'T':
+        break
+    elif ulang == 'Y':
+        continue
+    else:
+        print("Jawaban anda tidak valid, program ini akan berhenti")
+        break
 
 
+print("\n===Selesaai===")
+print("Terima kasih! Program telah selesai")
