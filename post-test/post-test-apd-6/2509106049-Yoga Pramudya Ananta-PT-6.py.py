@@ -4,7 +4,7 @@ users = {
     'admin': {'password': 'admin123', 'role': 'admin'}, 
     'user': {'password': 'user123', 'role': 'user'}
 }
-rental_data = {}
+rental_data = [ ]
 
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -45,8 +45,8 @@ while True:
                         harga = input('Harga per jam: ')
 
                         if durasi.isdigit() and harga.isdigit():
-                            total = int(durasi) * int(harga)
-                            rental_data.append({
+                            total = int(durasi) * int(harga) 
+                            rental_data.append ({
                                 'nama': nama,
                                 'ps': ps,
                                 'durasi': durasi,
